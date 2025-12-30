@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>رستوران پرپروک — سفارش آنلاین</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav id="sidebar-fixed-right">
+  <div class="sidebar-logo-area">
+    <img src="https://image.similarpng.com/file/similarpng/original-picture/2020/05/Pizza-logo-vector-PNG.png" alt="Logo">
+  </div>
+  <div class="sidebar-menu-links">
+    <a href="#" id="btn-order"><span class="s-text">سفارش آنلاین</span> <i class="fa-solid fa-credit-card"></i></a>
+    <a href="#" id="btn-what"><span class="s-text">چی بخورم؟</span> <i class="fa-solid fa-user-check"></i></a>
+    <a href="#" id="btn-chef"><span class="s-text">سرآشپز آنلاین</span> <i class="fa-solid fa-utensils"></i></a>
+    <a href="#" id="btn-party"><span class="s-text">پیتزا پارتی</span> <i class="fa-solid fa-pizza-slice"></i></a>
+    <div class="s-divider"></div>
+    <a href="#" id="btn-branches"><span class="s-text">شعب</span> <i class="fa-solid fa-location-dot"></i></a>
+    <a href="#" id="btn-team"><span class="s-text">پرپروکی‌ها</span> <i class="fa-solid fa-users"></i></a>
+    <a href="#" id="btn-news"><span class="s-text">اخبار</span> <i class="fa-solid fa-newspaper"></i></a>
+    <div class="s-divider"></div>
+    <a href="#" id="btn-account"><span class="s-text">حساب کاربری</span> <i class="fa-solid fa-user"></i></a>
+    <a href="#" id="btn-coupon"><span class="s-text">کوپن تخفیف</span> <i class="fa-solid fa-percent"></i></a>
+  </div>
+</nav>
+
+    <div class="topbar bg-dark text-white small">
+    <div class="container d-flex justify-content-between py-2">
+      <div><i class="bi bi-megaphone me-2"></i> ۲۰٪ تخفیف برای اولین سفارش آنلاین!</div>
+      <div class="d-none d-md-block">شماره سراسری: <a href="tel:1541" class="text-warning text-decoration-none">۱۵۴۱</a></div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<div class="menu-wrapper">
+    <button class="nav-arrow right-arrow"><i class="bi bi-chevron-right"></i></button>
+    
+    <div class="menu-container-fluid" id="category-slider">
+        <div class="menu-items-track">
+            <div class="menu-item bg-yellow">
+                <i class="bi bi-egg-fried"></i>
+                <span>صبحانه</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-pie-chart"></i>
+                <span>پیتزا</span>
+            </div>
+            <div class="menu-item bg-grey">
+                <i class="bi bi-shadows"></i>
+                <span>پیتزا سیسیلی</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-fullscreen"></i>
+                <span>پیتزا جامبو</span>
+            </div>
+             <div class="menu-item bg-grey">
+                <i class="bi bi-fire"></i>
+                <span>گریل</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-bowl-hot"></i>
+                <span>پاستا</span>
+            </div>
+            <div class="menu-item bg-dark-grey">
+                <i class="bi bi-egg-fill"></i>
+                <span>ساندویچ</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-drumstick-fill"></i>
+                <span>سوخاری</span>
+            </div>
+            <div class="menu-item bg-grey">
+                <i class="bi bi-box-seam"></i>
+                <span>پیش غذا</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-cup-straw"></i>
+                <span>نوشیدنی سرد</span>
+            </div>
+             <div class="menu-item bg-grey">
+                <i class="bi bi-cake2"></i>
+                <span>شیرینی و دسر</span>
+            </div>
+            <div class="menu-item bg-red">
+                <i class="bi bi-cup-hot"></i>
+                <span>قهوه و نوشیدنی گرم</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-arrow left-arrow"><i class="bi bi-chevron-left"></i></button>
+</div>
+
+  <!-- Top promo bar -->
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-d px-4">
+      <a class="navbar-brand f<w-bold text-danger fs-3" href="#">PERPEROOK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fw-bold" href="#menu">منو غذا</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#about">داستان ما</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#contact">شعب</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3 ms-lg-4">
+          <button class="btn btn-danger rounded-pill px-4" id="openCart" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+            <i class="bi bi-bag-check me-1"></i> سبد خرید
+            <span class="badge bg-white text-danger ms-1" id="cartBadge">0</span>
+</button>
+<button class="btn btn-outline-primary rounded-pill px-3 ms-2" id="openRegisterBtn" type="button">
+  <i class="bi bi-person-plus me-1"></i> ثبت‌نام
+</button>
+
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero py-5" style="background: linear-gradient(90deg,#fff 0%,#fff5f5 100%);">
+    <div class="container-d px-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-danger mb-3 px-3 py-2">انتخاب اول اصفهان</span>
+          <h1 class="display-4 fw-bold mb-4">طعم واقعی <span class="text-danger">پیتزا پنجره‌ای</span> با متریال تازه</h1>
+          <p class="lead text-muted mb-5">رستوران‌های زنجیره‌ای پرپروک با بیش از دو دهه تجربه، بهترین کیفیت را به سفره‌های شما می‌آورد.</p>
+          <div class="d-flex gap-3">
+            <a href="#menu" class="btn btn-danger btn-lg px-5 shadow">همین حالا گرسنمه!</a>
+            <a href="#fried" class="btn btn-outline-dark btn-lg px-4">مشاهده سوخاری‌ها</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://wallpapercave.com/wp/wp10322912.jpg" class="img-fluid rounded-4 shadow-lg" alt="Pizza Hero">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter bar -->
+  <section class="sticky-filter bg-white border-bottom shadow-sm" style="top:72px; z-index:998;">
+    <div class="container py-3">
+      <div class="d-flex align-items-center overflow-auto no-scrollbar gap-2">
+        <span class="fw-bold me-3 text-nowrap"><i class="bi bi-sliders"></i> فیلتر:</span>
+        <button class="btn btn-sm btn-outline-danger active rounded-pill px-3" data-filter="all">همه</button>
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3" data-filter="popular">محبوب‌ترین‌ها</button>
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3" data-filter="spicy">تند و اسپایسی</button>
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3" data-filter="veg">گیاهی</button>
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3" data-filter="burgers">همبرگر</button>
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3" data-filter="fried">سوخاری</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full menu: pizzas, fried, burgers, sides, salads, drinks -->
+  <!-- Pizzas -->
+  <section id="menu" class="py-5">
+    <div class="container-d px-4">
+      <h2 class="fw-bold mb-4 d-flex align-items-center">
+        <span class="bg-danger p-2 rounded me-3"></span> پیتزاها
+      </h2>
+      <div class="row g-4">
+        <!-- Nine pizza cards (IDs pizza-01 .. pizza-09) -->
+        <!-- Example card: pizza-01 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="popular" data-id="pizza-01" data-title="پیتزا پنجره‌ای مخصوص" data-price="285000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp1813257.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا مخصوص">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا پنجره‌ای مخصوص</h5>
+              <p class="text-muted small">ژامبون، سوسیس، قارچ، فلفل دلمه و پنیر</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۸۵,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity" aria-live="polite">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <div class="d-flex justify-content-between mb-3 small border-top pt-2">
+                <span>جمع این آیتم:</span><span class="item-subtotal fw-bold">۰ تومان</span>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart" type="button">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add remaining pizza cards (pizza-02 .. pizza-09) -->
+        <!-- pizza-02 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="spicy" data-id="pizza-02" data-title="پیتزا پپرونی اسپایسی" data-price="260000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp1813157.webp" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا پپرونی">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا پپرونی اسپایسی</h5>
+              <p class="text-muted small">پپرونی، سس تند، پنیر موزارلا</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۶۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-03 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="veg" data-id="pizza-03" data-title="پیتزا سبزیجات" data-price="220000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp7600928.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا سبزیجات">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا سبزیجات</h5>
+              <p class="text-muted small">ذرت، زیتون، قارچ، کدو، بادمجان</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۲۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-04 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="popular" data-id="pizza-04" data-title="پیتزا چهار فصل" data-price="240000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp12268637.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا چهار فصل">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا چهار فصل</h5>
+              <p class="text-muted small">مخلوط سبزیجات، گوشت و قارچ</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۴۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-05 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="special" data-id="pizza-05" data-title="پیتزا مارگاریتا" data-price="200000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp12268670.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا مارگاریتا">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا مارگاریتا</h5>
+              <p class="text-muted small">سس گوجه، ریحان تازه، پنیر موزارلا</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۰۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-06 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="special" data-id="pizza-06" data-title="پیتزا چهار پنیر" data-price="275000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp12268689.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا چهار پنیر">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا چهار پنیر</h5>
+              <p class="text-muted small">موزارلا، پارمزان، گودا، پنیر آبی</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۷۵,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-07 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="popular" data-id="pizza-07" data-title="پیتزا مخصوص گوشت" data-price="300000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp12268699.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا گوشت">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا مخصوص گوشت</h5>
+              <p class="text-muted small">گوشت چرخ‌کرده، پیاز، فلفل و پنیر</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۳۰۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-08 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="seafood" data-id="pizza-08" data-title="پیتزا دریایی" data-price="295000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp1813253.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا دریایی">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا دریایی</h5>
+              <p class="text-muted small">میگو، ماهی، سس مخصوص و پنیر</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۹۵,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- pizza-09 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="special" data-id="pizza-09" data-title="پیتزا باربیکیو" data-price="250000">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://wallpapercave.com/wp/wp12268674.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="پیتزا باربیکیو">
+            <div class="card-body">
+              <h5 class="fw-bold">پیتزا باربیکیو</h5>
+              <p class="text-muted small">مرغ باربیکیو، سس باربیکیو، پیاز کاراملی</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h6 fw-bold text-success">۲۵۰,۰۰۰ تومان</span>
+              </div>
+              <div class="quantity-control mb-3 d-flex align-items-center gap-2">
+                <button class="btn btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger w-100 add-to-cart">اضافه به سبد</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fried (سوخاری) -->
+  <section id="fried" class="py-5 bg-light">
+<div class="container">
+      <h2 class="fw-bold mb-4">سوخاری و مرغ</h2>
+      <div class="row g-4">
+        <!-- fried-01 .. fried-06 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-01" data-title="باکت ۳ تکه" data-price="195000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4349131.png" class="card-img-top" style="height:200px; object-fit:cover;" alt="باکت 3 تکه">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">باکت ۳ تکه</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۹۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-02" data-title="بال سوخاری (۶ عدد)" data-price="165000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4157766.jpeg" class="card-img-top" style="height:200px; object-fit:cover;" alt="بال سوخاری">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">بال سوخاری (۶ عدد)</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۶۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-03" data-title="فیله سوخاری" data-price="175000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3050484.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="فیله سوخاری">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">فیله سوخاری</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۷۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-04" data-title="ساندویچ سوخاری" data-price="125000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4360496.png" class="card-img-top" style="height:200px; object-fit:cover;" alt="ساندویچ سوخاری">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">ساندویچ سوخاری</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۲۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-05" data-title="پرس سوخاری خانوادگی" data-price="350000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4347436.jpeg" class="card-img-top" style="height:200px; object-fit:cover;" alt="پرس خانوادگی">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">پرس سوخاری خانوادگی</h6>
+              <span class="text-danger fw-bold d-block mb-2">۳۵۰,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="fried" data-id="fried-06" data-title="ناگت مخصوص" data-price="95000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp3711400.jpeg" class="card-img-top" style="height:200px; object-fit:cover;" alt="ناگت">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">ناگت مخصوص</h6>
+              <span class="text-danger fw-bold d-block mb-2">۹۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-outline-secondary minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-outline-secondary plus">+</button>
+              </div>
+              <button class="btn btn-dark btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Burgers -->
+  <section id="burgers" class="py-5 bg-white">
+    <div class="container-fluid px-4">
+      <h2 class="fw-bold mb-4">همبرگرها</h2>
+      <div class="row g-4">
+        <!-- burger-01 .. burger-06 -->
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-01" data-title="همبرگر کلاسیک" data-price="145000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3732373.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="همبرگر کلاسیک">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">همبرگر کلاسیک</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۴۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-02" data-title="چیزبرگر ویژه" data-price="165000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4789281.png" class="card-img-top" style="height:200px; object-fit:cover;" alt="چیزبرگر">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">چیزبرگر ویژه</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۶۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-03" data-title="همبرگر بیکن" data-price="175000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3732382.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="همبرگر بیکن">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">همبرگر بیکن</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۷۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-04" data-title="همبرگر گیاهی" data-price="135000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3732443.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="همبرگر گیاهی">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">همبرگر گیاهی</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۳۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-05" data-title="همبرگر دوبل" data-price="220000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3732460.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="همبرگر دوبل">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">همبرگر دوبل</h6>
+              <span class="text-danger fw-bold d-block mb-2">۲۲۰,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 menu-card" data-category="burgers" data-id="burger-06" data-title="همبرگر مخصوص پرپروک" data-price="185000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp2186095.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="همبرگر مخصوص">
+            <div class="card-body text-center">
+              <h6 class="fw-bold">همبرگر مخصوص پرپروک</h6>
+              <span class="text-danger fw-bold d-block mb-2">۱۸۵,۰۰۰ تومان</span>
+              <div class="quantity-control d-flex justify-content-center gap-2 mb-2">
+                <button class="btn btn-sm btn-light minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sides & Salads -->
+  <section id="sides" class="py-5 bg-white">
+<div class="container">
+      <h2 class="fw-bold mb-4">پیش‌غذا و سالاد</h2>
+      <div class="row g-4">
+        <!-- sides and salads (side-01 .. side-04, salad-01 .. salad-03) -->
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-category="popular" data-id="side-01" data-title="سیب‌زمینی سرخ‌کرده" data-price="95000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp2148248.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="سیب زمینی">
+            <div class="card-body">
+              <h6 class="fw-bold">سیب‌زمینی سرخ‌کرده</h6>
+              <span class="text-success fw-bold d-block mb-2">۹۵,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-id="side-02" data-title="قارچ سوخاری" data-price="120000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp12814709.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="قارچ سوخاری">
+            <div class="card-body">
+              <h6 class="fw-bold">قارچ سوخاری (۸ عدد)</h6>
+              <span class="text-success fw-bold d-block mb-2">۱۲۰,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-id="side-03" data-title="نان سیر" data-price="110000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/uwp/uwp4361980.jpeg" class="card-img-top" style="height:160px; object-fit:cover;" alt="نان سیر">
+            <div class="card-body">
+              <h6 class="fw-bold">نان سیر</h6>
+              <span class="text-success fw-bold d-block mb-2">۱۱۰,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-id="side-04" data-title="پیاز حلقه‌ای" data-price="85000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3089588.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="پیاز حلقه‌ای">
+            <div class="card-body">
+              <h6 class="fw-bold">پیاز حلقه‌ای</h6>
+              <span class="text-success fw-bold d-block mb-2">۸۵,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salads -->
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-category="popular" data-id="salad-01" data-title="سالاد سزار" data-price="185000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp3063126.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="سالاد سزار">
+            <div class="card-body">
+              <h6 class="fw-bold">سالاد سزار با مرغ</h6>
+              <span class="text-success fw-bold d-block mb-2">۱۸۵,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-id="salad-02" data-title="سالاد فصل" data-price="125000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp13916232.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="سالاد فصل">
+            <div class="card-body">
+              <h6 class="fw-bold">سالاد فصل</h6>
+              <span class="text-success fw-bold d-block mb-2">۱۲۵,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 menu-card" data-id="salad-03" data-title="سالاد یونانی" data-price="135000">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://wallpapercave.com/wp/wp13916335.jpg" class="card-img-top" style="height:160px; object-fit:cover;" alt="سالاد یونانی">
+            <div class="card-body">
+              <h6 class="fw-bold">سالاد یونانی</h6>
+              <span class="text-success fw-bold d-block mb-2">۱۳۵,۰۰۰ تومان</span>
+              <div class="quantity-control mb-2 d-flex gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-outline-danger btn-sm w-100 add-to-cart">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section id="drinks" class="py-5 bg-light">
+<div class="container">
+      <h2 class="fw-bold mb-4">نوشیدنی‌ها</h2>
+      <div class="row g-4">
+        <!-- drink-01 .. drink-08 -->
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-01" data-title="کولا قوطی" data-price="35000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-cup-straw fs-1 text-danger"></i>
+              <h6 class="mt-2 small fw-bold">کولا قوطی</h6>
+              <span class="text-muted d-block small">۳۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-02" data-title="دوغ محلی" data-price="30000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-droplet fs-1 text-primary"></i>
+              <h6 class="mt-2 small fw-bold">دوغ محلی</h6>
+              <span class="text-muted d-block small">۳۰,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-03" data-title="آب معدنی" data-price="15000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-moisture fs-1 text-info"></i>
+              <h6 class="mt-2 small fw-bold">آب معدنی</h6>
+              <span class="text-muted d-block small">۱۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-04" data-title="نوشابه خانواده" data-price="65000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-bottle fs-1 text-secondary"></i>
+              <h6 class="mt-2 small fw-bold">نوشابه خانواده</h6>
+              <span class="text-muted d-block small">۶۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-05" data-title="آبمیوه طبیعی" data-price="45000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-egg-fried fs-1 text-warning"></i>
+              <h6 class="mt-2 small fw-bold">آبمیوه طبیعی</h6>
+              <span class="text-muted d-block small">۴۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-06" data-title="شیک شکلاتی" data-price="65000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-cup-straw fs-1 text-dark"></i>
+              <h6 class="mt-2 small fw-bold">شیک شکلاتی</h6>
+              <span class="text-muted d-block small">۶۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-07" data-title="قهوه سرد" data-price="55000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-cup fs-1 text-dark"></i>
+              <h6 class="mt-2 small fw-bold">قهوه سرد</h6>
+              <span class="text-muted d-block small">۵۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 menu-card" data-category="drinks" data-id="drink-08" data-title="چای سنتی" data-price="25000">
+          <div class="card text-center border-0 shadow-sm">
+            <div class="p-3">
+              <i class="bi bi-cup-straw fs-1 text-success"></i>
+              <h6 class="mt-2 small fw-bold">چای سنتی</h6>
+              <span class="text-muted d-block small">۲۵,۰۰۰ تومان</span>
+              <div class="quantity-control my-2 d-flex justify-content-center gap-2">
+                <button class="btn btn-sm btn-light border minus">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-sm btn-light border plus">+</button>
+              </div>
+              <button class="btn btn-danger btn-sm w-100 add-to-cart">خرید</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5 bg-white overflow-hidden">
+<div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="pe-lg-5">
+            <h6 class="text-danger fw-bold text-uppercase">درباره ما</h6>
+            <h2 class="display-6 fw-bold mb-4">داستان پرپروک؛ از یک پنجره کوچک تا سفره‌های شما</h2>
+            <p class="text-muted mb-4">
+              همه چیز از سال ۱۳۷۶ شروع شد. ما در "پرپروک" معتقد بودیم که پیتزا نباید فقط یک غذای سریع باشد، بلکه باید تجربه‌ای از طعم‌های اصیل و مواد تازه باشد.
+            </p>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="p-3 border-start border-danger border-4 bg-light">
+                  <h4 class="fw-bold mb-0">۱۵+</h4>
+                  <small class="text-muted">شعبه فعال در کشور</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 border-start border-warning border-4 bg-light">
+                  <h4 class="fw-bold mb-0">۱۰۰٪</h4>
+                  <small class="text-muted">رضایت مشتریان</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 position-relative text-center">
+          <img src="https://wallpapercave.com/wp/wp10322935.jpg" class="img-fluid rounded-circle shadow-lg p-3 bg-white" alt="Chef">
+          <div class="position-absolute bottom-0 start-0 bg-danger text-white p-3 rounded shadow">
+             <span class="h2 fw-bold d-block">۲۵+</span>
+             <small>سال تجربه درخشان</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-5 bg-white">
+<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h3 class="text-center fw-bold mb-4">سوالات متداول مشتریان</h3>
+          <div class="accordion shadow-sm" id="faqOrder">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">زمان ارسال غذا چقدر است؟</button></h2>
+              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqOrder">
+                <div class="accordion-body">بسته به محدوده شما بین ۳۰ تا ۵۰ دقیقه متغیر است.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">آیا امکان پرداخت در محل وجود دارد؟</button></h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqOrder">
+                <div class="accordion-body">بله، می‌توانید هنگام تحویل غذا از دستگاه پوز استفاده کنید.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section id="contact" class="py-5 bg-light">
+<div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <form id="contactForm" novalidate>
+            <h4 class="fw-bold mb-3">ارتباط با پشتیبانی</h4>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="نام شما" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="ایمیل" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="پیام شما"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger w-100">ارسال پیام</button>
+          </form>
+        </div>
+
+        <div class="col-lg-7 text-center">
+          <div class="p-2 border border-secondary rounded">
+            <img src="https://api.perperook.ir/Image/product/1/%D8%B4%D8%B9%D8%A8%D9%87/%D9%BE%D8%B1%D9%BE%D8%B1%D9%88%DA%A9-%DA%AF%DB%8C%D8%B4%D8%A7.jpg" class="img-fluid rounded" alt="Map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-4 border-top border-secondary">
+    <div class="container text-center text-muted small">
+      <div class="mb-3">
+        <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-telegram"></i></a>
+        <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <p class="mb-0">کلیه حقوق مادی و معنوی این وب‌سایت متعلق به رستوران پرپروک است.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile checkout bar -->
+  <div class="d-lg-none fixed-bottom p-3 bg-white border-top shadow-lg" style="z-index:1050;">
+    <button class="btn btn-success w-100 py-3 fw-bold fs-5 shadow" id="checkoutBtnMobile">
+       تایید و پرداخت: <span id="cartTotalMobile">۰ تومان</span>
+    </button>
+  </div>
+
+  <!-- Mobile quick view button (opens same offcanvas) -->
+  <div class="fixed-bottom p-3 d-lg-none" style="z-index:1040; bottom:72px;">
+    <button class="btn btn-danger w-100 shadow-lg py-3 fw-bold" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+        <i class="bi bi-cart3"></i> مشاهده سبد خرید (<span id="cartCount">0</span>)
+    </button>
+  </div>
+
+  <!-- Cart Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel">
+    <div class="offcanvas-header bg-danger text-white">
+        <h5 class="offcanvas-title fw-bold" id="cartSidebarLabel">******سفارش‌های شما</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column">
+        <div id="cartItemsList" class="flex-grow-1 overflow-auto">
+            <div class="text-center mt-5 text-muted" id="emptyCartMsg">
+                <i class="bi bi-basket fs-1"></i>
+                <p class="mt-2">سبد خرید شما در حال حاضر خالی است.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer border-top pt-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="fw-bold">مبلغ قابل پرداخت:</span>
+                <span class="h5 fw-bold text-danger mb-0" id="finalPrice">۰ تومان</span>
+            </div>
+            <div class="row g-2">
+                <div class="col-6">
+                    <button class="btn btn-outline-secondary w-100 py-2" id="clearAllBtn">کنسل کل</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-success w-100 py-2 fw-bold" id="submitOrderBtn">ثبت سفارش</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Toast wrapper (dynamic) -->
+  <div id="toast-wrapper" class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index:1060; display:none;"></div>
+<!-- Modal: Register -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="registerModalLabel">ثبت‌نام در پرپروک</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+      </div>
+      <div class="modal-body">
+        <form id="registerFormModal" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">نام و نام خانوادگی</label>
+              <input type="text" id="mRegName" class="form-control" required>
+              <div class="invalid-feedback">لطفاً نام و نام خانوادگی را وارد کنید.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">ایمیل</label>
+              <input type="email" id="mRegEmail" class="form-control" required>
+              <div class="invalid-feedback" id="mRegEmailFeedback">ایمیل نامعتبر یا قبلاً استفاده شده است.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">شماره تماس</label>
+              <input type="tel" id="mRegPhone" class="form-control" required>
+              <div class="invalid-feedback" id="mRegPhoneFeedback">شماره تماس نامعتبر یا قبلاً استفاده شده است.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">آدرس (اختیاری)</label>
+              <input type="text" id="mRegAddress" class="form-control">
+            </div>
+
+            <div class="col-md-6 position-relative">
+              <label class="form-label small fw-bold">رمز عبور</label>
+              <div class="input-group">
+                <input type="password" id="mRegPassword" class="form-control" placeholder="حداقل ۸ کاراکتر" required>
+                <button class="btn btn-outline-secondary" type="button" id="mPwdToggle" aria-label="نمایش رمز"><i class="bi bi-eye"></i></button>
+              </div>
+              <div class="form-text small text-muted mt-1">ترکیبی از حروف بزرگ، کوچک، عدد و نمادها امنیت را افزایش می‌دهد.</div>
+              <div class="invalid-feedback">رمز عبور باید حداقل ۸ کاراکتر باشد.</div>
+
+              <div class="mt-2">
+                <div class="progress" style="height:8px;">
+                  <div id="mPwdStrengthBar" class="progress-bar" role="progressbar" style="width:0%"></div>
+                </div>
+                <small id="mPwdStrengthText" class="text-small text-muted">قدرت رمز: نامشخص</small>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">تکرار رمز عبور</label>
+              <input type="password" id="mRegPasswordConfirm" class="form-control" required>
+              <div class="invalid-feedback" id="mPwdConfirmFeedback">رمزها یکسان نیستند.</div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="mRegTerms" required>
+                <label class="form-check-label small" for="mRegTerms">قوانین و شرایط را خوانده و می‌پذیرم</label>
+                <div class="invalid-feedback">برای ادامه باید قوانین را بپذیرید.</div>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex gap-2">
+              <button type="submit" id="mRegisterBtn" class="btn btn-success">ثبت‌نام و ادامه</button>
+              <button type="button" id="mRegisterClear" class="btn btn-outline-secondary" data-bs-dismiss="modal">انصراف</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-overlay" class="modal-overlay"></div>
+
+<div id="modal-branches" class="p-modal">
+    <div class="modal-header"><h3>📍 شعب پرپروک</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <p>نزدیک‌ترین شعبه را پیدا کنید:</p>
+        <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p>نقشه تعاملی شعب تهران و شهرستان‌ها</p>
+        </div>
+        <ul class="branch-list">
+            <li>شعبه سعادت‌آباد: میدان کاج</li>
+            <li>شعبه ولنجک: بلوار دانشجو</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-chef" class="p-modal">
+    <div class="modal-header"><h3>👨‍🍳 سرآشپزهای حرفه‌ای ما</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <div class="chef-card">
+            <p><b>سرآشپز کامران:</b> متخصص پیتزاهای کلاسیک و خمیرهای دست‌ساز.</p>
+            <p><b>سرآشپز سارا:</b> خلاق در ترکیب طعم‌های نوین و سس‌های اختصاصی.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal-party" class="p-modal">
+    <div class="modal-header"><h3>🎉 پیتزا پارتی</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <div class="promo-box">
+            <h4>تخفیف ویژه دورهمی!</h4>
+            <p>برای سفارش‌های بالای ۵ عدد پیتزا، <b>۱۵٪ تخفیف ویژه</b> و ارسال رایگان هدیه بگیرید.</p>
+            <button class="modal-btn">مشاهده پکیج‌های مهمانی</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-news" class="p-modal">
+    <div class="modal-header"><h3>🗞 آخرین اخبار پرپروک</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <ul>
+            <li>✨ افتتاح شعبه جدید در شهر اصفهان</li>
+            <li>🥦 اضافه شدن سبزیجات ارگانیک به تمامی سالادها</li>
+            <li>🏆 دریافت تندیس زرین رضایت مشتری در سال ۱۴۰۳</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-team" class="p-modal">
+    <div class="modal-header"><h3>👥 خانواده بزرگ پرپروکی‌ها</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <p>با عضویت در باشگاه مشتریان (پرپروکی‌ها)، به ازای هر سفارش امتیاز بگیرید و در سفارش‌های بعدی تخفیف نقدی دریافت کنید.</p>
+        <button class="modal-btn">عضویت در باشگاه</button>
+    </div>
+</div>
+
+<div id="modal-account" class="p-modal">
+    <div class="modal-header"><h3>👤 ورود / ثبت‌نام</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <input type="text" placeholder="شماره موبایل خود را وارد کنید" class="modal-input">
+        <button class="modal-btn">ارسال کد تایید</button>
+    </div>
+</div>
+
+<div id="modal-coupon" class="p-modal">
+    <div class="modal-header"><h3>🎫 کد تخفیف دارید؟</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <input type="text" placeholder="کد را اینجا بنویسید" class="modal-input">
+        <button class="modal-btn green">بررسی و اعمال</button>
+    </div>
+</div>
+
+<div id="modal-order" class="p-modal">
+    <div class="modal-header"><h3>🛒 سفارش سریع</h3><span class="close-modal">&times;</span></div>
+    <div class="modal-body">
+        <p>نوع سفارش خود را انتخاب کنید:</p>
+        <button class="modal-btn">سفارش بیرون‌بر</button>
+        <div style="margin-top: 10px;"></div>
+        <button class="modal-btn secondary">میل در رستوران</button>
+    </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- App JS -->
+  <script src="script.js"></script>
+</body>
+</html>
