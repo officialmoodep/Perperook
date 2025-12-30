@@ -1,0 +1,428 @@
+/* style.css — اصلاح‌شده و هماهنگ با HTML و script.js */
+
+/* =========================
+   Variables and Base Setup
+   ========================= */
+:root{
+  --bg: #ffffff;
+  --muted: #6c757d;
+  --danger: #dc3545;
+  --danger-600: #c82333;
+  --success: #198754;
+  --card-shadow: 0 6px 18px rgba(18, 38, 63, 0.06);
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;
+  --transition: 200ms cubic-bezier(.2,.8,.2,1);
+  --max-content-width: 1200px;
+  --font-sans: "Segoe UI", Tahoma, "Helvetica Neue", Arial, sans-serif;
+
+  /* ارتفاع‌های پیش‌فرض که توسط JS به‌روز می‌شوند */
+  --topbar-height: 40px;
+  --navbar-height: 64px;
+  --filter-height: 56px;
+}
+/* استایل کادر */
+.modal {
+  display: none; /* مخفی پیش‌فرض */
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#close-modal {
+  float: left;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* RTL baseline */
+html[dir="rtl"] { direction: rtl; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  /* فاصله بالای محتوا برای جلوگیری از پوشیده شدن توسط نوارها */
+  padding-top: calc(var(--topbar-height) + var(--navbar-height) + var(--filter-height));
+}
+
+/* Container width control */
+.container { max-width: var(--max-content-width); }
+/* تنظیمات کلی نوار */
+.menu-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #333;
+    direction: rtl;
+    padding: 0 40px; /* فضا برای دکمه‌ها */
+    overflow: hidden;
+}
+
+.menu-container-fluid {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* hide scrollbar IE/Edge */
+    scrollbar-width: none;  /* hide scrollbar Firefox */
+}
+
+.menu-container-fluid::-webkit-scrollbar {
+    display: none; /* hide scrollbar Chrome/Safari */
+}
+
+.menu-items-track {
+    display: flex;
+    white-space: nowrap;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    height: 90px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.menu-item span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* رنگ‌بندی مشابه تصویر */
+.bg-red { background-color: #e41c1c; }
+.bg-grey { background-color: #6c757d; }
+.bg-dark-grey { background-color: #495057; }
+.bg-yellow { background-color: #ffc107; color: #000 !important; }
+
+/* دکمه‌های ناوبری */
+.nav-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.right-arrow { right: 0; }
+.left-arrow { left: 0; }
+
+.nav-arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* بهینه سازی موبایل */
+@media (max-width: 768px) {
+    .menu-item {
+        min-width: 90px;
+        height: 80px;
+    }
+    .menu-item span { font-size: 11px; }
+}
+/* =========================
+   Typography
+   ========================= */
+h1, h2, h3, h4, h5, h6 { line-height: 1.15; margin-top: 0; margin-bottom: .6rem; }
+h1 { font-size: 2.25rem; font-weight: 700; }
+h2 { font-size: 1.75rem; font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+.lead { font-size: 1.05rem; color: var(--muted); }
+.small, .text-small { font-size: .85rem; }
+
+
+
+/* =========================
+   Hero and Sections
+   ========================= */
+.hero { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.section-title { display:flex; align-items:center; gap:.75rem; }
+
+/* =========================
+   Menu Cards
+   ========================= */
+.menu-card .card {
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  background: #fff;
+}
+.menu-card .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(18,38,63,0.08); }
+
+.card-img-top { border-radius: 8px; display:block; width:100%; height:auto; object-fit:cover; }
+
+/* Card body spacing */
+.card-body { padding: 1rem; }
+
+/* Price and meta */
+.menu-card .h6, .menu-card .h5 { margin-bottom: .25rem; }
+.menu-card .text-success { color: var(--success) !important; font-weight:700; }
+
+/* Quantity control */
+.quantity-control { display:flex; align-items:center; gap:.5rem; }
+.quantity-control .btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.quantity { min-width: 34px; text-align:center; font-weight:700; display:inline-block; }
+
+/* Item subtotal inside card */
+.item-subtotal { min-width: 120px; text-align: left; }
+
+/* Add to cart button */
+.add-to-cart {
+  border-radius: 10px;
+  padding: .6rem .8rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.add-to-cart:active { transform: translateY(1px); }
+
+/* =========================
+   Offcanvas / Cart UI
+   ========================= */
+.offcanvas { --bs-offcanvas-width: 420px; }
+.offcanvas-header { padding: .8rem 1rem; }
+.offcanvas-body { padding: 1rem; }
+
+/* Cart item row */
+.cart-item-row {
+  align-items: center;
+  gap: .75rem;
+}
+.cart-item-row img { width: 48px; height: 48px; object-fit: cover; border-radius: 8px; }
+
+/* Cart footer */
+.cart-footer { padding-top: .75rem; }
+
+/* Mobile checkout bar */
+#checkoutBtnMobile { border-radius: 12px; }
+
+/* =========================
+   Toasts / Notifications
+   ========================= */
+.toast-container { pointer-events: none; }
+.toast { pointer-events: auto; border-radius: 10px; overflow: hidden; }
+.toast .toast-body { display:flex; align-items:center; gap:.6rem; padding: .6rem .9rem; }
+
+/* Color overrides for better contrast */
+.text-bg-success { background-color: var(--success) !important; color: #fff !important; }
+.text-bg-danger { background-color: var(--danger) !important; color: #fff !important; }
+
+/* =========================
+   Buttons and Utilities
+   ========================= */
+.btn-danger { background: linear-gradient(180deg, var(--danger) 0%, var(--danger-600) 100%); border: none; }
+.btn-danger:hover { filter: brightness(.95); }
+
+.btn-outline-danger {
+  border-radius: 999px;
+  border-width: 1px;
+  border-color: rgba(220,53,69,.15);
+}
+
+/* Small helpers */
+.text-muted { color: var(--muted) !important; }
+.shadow-lg { box-shadow: 0 10px 30px rgba(18,38,63,0.08) !important; }
+
+/* =========================
+   Accessibility & Focus
+   ========================= */
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(13,110,253,0.12);
+  outline-offset: 2px;
+  transition: outline var(--transition);
+}
+
+/* =========================
+   Responsive tweaks
+   ========================= */
+@media (max-width: 991.98px) {
+  .perperook-sidebar { display: none; }
+  body { padding-top: calc(var(--topbar-height) + var(--navbar-height)); }
+  .hero { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .offcanvas { --bs-offcanvas-width: 100%; }
+  .sticky-filter { position: static; } /* در موبایل فیلتر به صورت عادی نمایش داده شود */
+}
+
+
+@media (min-width: 992px) {
+  /* فضای پیش‌فرض برای سایدبار */
+  body { padding-left: 70px; }
+}
+
+/* =========================
+   Micro-animations
+   ========================= */
+@keyframes popIn {
+  from { transform: scale(.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.menu-card .card { animation: popIn .18s ease both; }
+
+/* =========================
+   Print & Performance
+   ========================= */
+@media print {
+  .no-print, .perperook-sidebar, .topbar, .navbar, .offcanvas, #checkoutBtnMobile { display: none !important; }
+  body { background: #fff; color: #000; padding-top: 0; }
+}
+
+/* =========================
+   Developer helpers (optional)
+   ========================= */
+/* .debug-border * { outline: 1px dashed rgba(0,0,0,.06); } */
+/* Modal register tweaks */
+.modal-content { border-radius: 12px; }
+#registerModal .form-label { font-weight: 600; }
+#mPwdStrengthBar { transition: width .25s ease; height:8px; border-radius:6px; }
+.pwd-weak { background:#e74c3c !important; }
+.pwd-medium { background:#f1c40f !important; }
+.pwd-strong { background:#28a745 !important; }
+/* user menu */
+#userDropdownMenu {
+  min-width: 180px;
+}
+.user-name-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+}
+.user-avatar {
+  width:28px; height:28px; border-radius:50%; object-fit:cover; background:#f1f1f1; display:inline-block;
+  text-align:center; line-height:28px; font-weight:700; color:#666;
+}
+/* Full width layout helpers */
+
+/* Hide left sidebar and remove its padding space */
+.perperook-sidebar { display: none !important; }
+body { padding-left: 0 !important; }
+
+/* Hero full viewport */
+.hero {
+  min-height: 100vh; /* پوشش کل صفحه */
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Make images and cards stretch nicely */
+.card-img-top, .hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+/* Navbar and topbar full width */
+.navbar, .topbar { width: 100%; left: 0; right: 0; }
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .container-fluid { padding-left: .75rem; padding-right: .75rem; }
+  .hero { padding-top: 2rem; padding-bottom: 2rem; }
+}
+/* ۱. تنظیم بدنه سایت برای حذف فضای سفید */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-right: 70px !important; /* ایجاد فضای ثابت برای نوار */
+    transition: padding-right 0.3s ease;
+    direction: rtl;
+    display: block !important; /* خروج از حالت فلکس برای حل مشکل سفیدی بالای صفحه */
+}
+
+/* ۲. جابجایی سایت هنگام باز شدن نوار */
+body:has(#sidebar-fixed-right:hover) {
+    padding-right: 250px !important;
+}
+
+/* ۳. استایل سایدبار */
+#sidebar-fixed-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    background-color: #f2f2f2;
+    border-left: 1px solid #ddd;
+    z-index: 99999;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar-fixed-right:hover {
+    width: 250px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+/* ۴. المان‌های داخلی */
+.sidebar-logo-area { text-align: center; padding: 20px 0; }
+.sidebar-logo-area img { width: 45px; transition: 0.3s; }
+#sidebar-fixed-right:hover .sidebar-logo-area img { width: 110px; }
+
+.sidebar-menu-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 25px;
+    color: #333;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.sidebar-menu-links i { font-size: 20px; width: 30px; text-align: center; color: #444; }
+
+.s-text {
+    opacity: 0;
+    margin-left: auto;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#sidebar-fixed-right:hover .s-text { opacity: 1; }
+.s-divider { height: 1px; background: #ddd; margin: 10px 15px; }
+
